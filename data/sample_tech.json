@@ -1,0 +1,58 @@
+[
+  {
+    "id": "TECH-001",
+    "customer": "Sarah Jenkins",
+    "text": "The camera quality on this phone is absolutely breathtaking and low-light photos are crisp. However, the battery life is terribly disappointing and barely lasts 5 hours of moderate use.",
+    "category": "Consumer Electronics",
+    "rating": 3
+  },
+  {
+    "id": "TECH-002",
+    "customer": "Marcus Chen",
+    "text": "Stunning 120Hz OLED screen with vibrant colors, and the build feels premium in hand. But customer support was rude when I called about the delayed charger shipment.",
+    "category": "Consumer Electronics",
+    "rating": 4
+  },
+  {
+    "id": "TECH-003",
+    "customer": "Elena Rostova",
+    "text": "The laptop runs silently and the keyboard ergonomics are flawless. Unfortunately, the trackpad is sluggish and the speakers sound tinny with no bass.",
+    "category": "Consumer Electronics",
+    "rating": 3
+  },
+  {
+    "id": "TECH-004",
+    "customer": "David Miller",
+    "text": "Total waste of money! The device overheats within ten minutes, battery drains while plugged in, and customer support refused my refund claim. I am never buying from this brand again!",
+    "category": "Consumer Electronics",
+    "rating": 1
+  },
+  {
+    "id": "TECH-005",
+    "customer": "Chloe Adams",
+    "text": "Incredible battery endurance lasting two full days! Fast charging is a game changer, and the display is bright even under direct sunlight. Highly recommend!",
+    "category": "Consumer Electronics",
+    "rating": 5
+  },
+  {
+    "id": "TECH-006",
+    "customer": "Raj Patel",
+    "text": "The wireless earbuds have decent sound clarity and bass is punchy, but the Bluetooth connectivity drops constantly during calls. Firmware update did not fix it.",
+    "category": "Consumer Electronics",
+    "rating": 3
+  },
+  {
+    "id": "TECH-007",
+    "customer": "Jessica Taylor",
+    "text": "The software is bloated with useless pre-installed apps. Performance lags when multitasking, though the physical design and aluminum frame look gorgeous.",
+    "category": "Consumer Electronics",
+    "rating": 2
+  },
+  {
+    "id": "TECH-008",
+    "customer": "Brian Walker",
+    "text": "Exceptional build quality, lightweight chassis, and lightning-fast processor. The price is a bit expensive, but well worth every single dollar.",
+    "category": "Consumer Electronics",
+    "rating": 5
+  }
+]

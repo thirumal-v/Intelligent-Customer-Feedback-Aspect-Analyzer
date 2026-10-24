@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="violet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Turn customer feedback into clear aspect-level sentiment, intent, urgency, and actionable next steps.">
+  <title>Intelligent Customer Feedback &amp; Aspect Analyzer</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Intelligent Customer Feedback &amp; Aspect Analyzer home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>Intelligent Customer Feedback &amp; Aspect Analyzer</span>
+      </a>
+      <div class="header-tools">
+        <label class="theme-control" for="themeSelect">
+          <span>Theme</span>
+          <select id="themeSelect" aria-label="Choose page theme">
+            <option value="violet">Violet</option>
+            <option value="midnight">Midnight</option>
+            <option value="ocean">Ocean</option>
+            <option value="rose">Rose</option>
+          </select>
+        </label>
+        <span class="header-note"><span class="status-dot"></span> AI-powered insights</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">CUSTOMER INTELLIGENCE, MADE ACTIONABLE</p>
+        <h1 id="page-title">Understand what your customers <span>really think.</span></h1>
+        <p class="intro-copy">Turn customer feedback into a clear picture of what is working, what needs attention, and what to do next.</p>
+        <ul class="feature-list" aria-label="Analysis capabilities">
+          <li>Aspect-level sentiment</li>
+          <li>Intent &amp; urgency</li>
+          <li>Recommended next steps</li>
+        </ul>
+      </section>
+
+      <section class="analyzer" aria-label="Feedback prediction">
+        <form id="analysisForm" class="input-card">
+          <div class="field-heading">
+            <label for="feedbackText">Customer feedback</label>
+            <span id="characterCount" class="character-count">0 characters</span>
+          </div>
+          <textarea id="feedbackText" name="text" maxlength="5000" required
+            placeholder="For example: The camera takes beautiful photos, but the battery drains too quickly."></textarea>
+          <div class="form-footer">
+            <label class="domain-control" for="domainSelect">
+              <span>Industry</span>
+              <select id="domainSelect" name="domain">
+                <option value="auto">Auto-detect</option>
+                <option value="consumer_tech">Consumer technology</option>
+                <option value="saas">SaaS &amp; software</option>
+                <option value="ecommerce">E-commerce &amp; retail</option>
+                <option value="hospitality">Hospitality &amp; dining</option>
+                <option value="fintech">Fintech &amp; banking</option>
+              </select>
+            </label>
+            <button id="analyzeButton" class="analyze-button" type="submit">
+              <span>Analyze feedback</span>
+              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p id="errorMessage" class="error-message" role="alert" hidden></p>
+        </form>
+
+        <div id="emptyState" class="empty-state">
+          <span class="empty-icon" aria-hidden="true">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+              <path d="M7 3.75h7l4.25 4.5v11A1.75 1.75 0 0 1 16.5 21h-9A1.75 1.75 0 0 1 5.75 19.25v-13A2.5 2.5 0 0 1 8.25 3.75Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M14 4v5h4M9 13h6M9 16.5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h2>Your analysis will appear here</h2>
+          <p>Enter a customer review above and select <strong>Analyze feedback</strong> to get started.</p>
+          <button id="exampleButton" class="example-button" type="button">Try an example <span aria-hidden="true">↗</span></button>
+        </div>
+
+        <section id="results" class="results" aria-live="polite" aria-labelledby="resultsTitle" hidden>
+          <div class="results-heading">
+            <div>
+              <p class="eyebrow">ANALYSIS RESULTS</p>
+              <h2 id="resultsTitle">Feedback breakdown</h2>
+            </div>
+            <span id="priorityBadge" class="priority-badge"></span>
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-card">
+              <span class="summary-label">Overall sentiment</span>
+              <strong id="overallSentiment" class="summary-value"></strong>
+              <span id="overallConfidence" class="summary-detail"></span>
+            </article>
+            <article class="summary-card">
+              <span class="summary-label">Primary intent</span>
+              <strong id="primaryIntent" class="summary-value"></strong>
+              <span class="summary-detail">Detected from your feedback</span>
+            </article>
+            <article class="summary-card">
+              <span class="summary-label">Urgency</span>
+              <strong id="urgencyScore" class="summary-value"></strong>
+              <span id="urgencyPriority" class="summary-detail"></span>
+              <div class="urgency-meter" role="progressbar" aria-label="Feedback urgency" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+                <span id="urgencyMeterFill"></span>
+              </div>
+              <span id="urgencyExplanation" class="summary-detail urgency-explanation"></span>
+            </article>
+          </div>
+
+          <section class="result-section takeaway-section" aria-labelledby="takeawayTitle">
+            <div class="section-heading">
+              <div>
+                <h3 id="takeawayTitle">What this feedback is telling you</h3>
+                <p class="visualization-caption">A plain-language read of the customer's experience.</p>
+              </div>
+            </div>
+            <p id="feedbackSummary" class="feedback-summary"></p>
+            <div id="feedbackSignals" class="feedback-signals"></div>
+          </section>
+
+          <section class="result-section visualization-section" aria-labelledby="visualizationTitle">
+            <div class="section-heading">
+              <div>
+                <h3 id="visualizationTitle">Feedback visualization</h3>
+                <p class="visualization-caption">See how the customer feels about each detail they mentioned.</p>
+              </div>
+            </div>
+            <div class="visualization-grid">
+              <div class="distribution-panel">
+                <h4>Sentiment across aspects</h4>
+                <p class="panel-description">Share of detected details, not review volume.</p>
+                <div id="sentimentBar" class="sentiment-bar" role="img" aria-label="Sentiment distribution"></div>
+                <div class="distribution-content">
+                  <div id="sentimentDonut" class="sentiment-donut" role="img" aria-label="Sentiment distribution">
+                    <span id="donutTotal" class="donut-total"></span>
+                    <span class="donut-caption">aspects</span>
+                  </div>
+                  <ul id="sentimentLegend" class="sentiment-legend" aria-label="Sentiment counts"></ul>
+                </div>
+              </div>
+              <div class="polarity-panel">
+                <h4>Aspect polarity</h4>
+                <p class="panel-description">More negative or positive scores indicate stronger sentiment.</p>
+                <div class="polarity-axis" aria-hidden="true">
+                  <span>Negative</span><span>Neutral</span><span>Positive</span>
+                </div>
+                <div id="polarityChart" class="polarity-chart" role="img" aria-label="Sentiment polarity for detected aspects"></div>
+              </div>
+            </div>
+            <p id="noVisualizationData" class="no-visualization-data" hidden>No aspects were detected to visualize. Try selecting a specific industry for more targeted results.</p>
+          </section>
+
+          <section class="result-section" aria-labelledby="aspectTitle">
+            <div class="section-heading">
+              <h3 id="aspectTitle">Aspect sentiment</h3>
+              <span id="aspectCount" class="section-meta"></span>
+            </div>
+            <div id="aspectList" class="aspect-list"></div>
+            <p id="noAspects" class="no-aspects" hidden>No distinct product or service aspects were detected in this feedback.</p>
+          </section>
+
+          <section class="result-section recommendation-section" aria-labelledby="recommendationTitle">
+            <div class="section-heading">
+              <div>
+                <h3 id="recommendationTitle">How to improve</h3>
+                <p class="visualization-caption">Practical next steps based on the issues and intent detected in this review.</p>
+              </div>
+            </div>
+            <ol id="recommendationList" class="recommendation-list"></ol>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AspectPulse</span>
+      <span>Customer feedback, understood.</span>
+    </footer>
+  </div>
+</body>
+</html>

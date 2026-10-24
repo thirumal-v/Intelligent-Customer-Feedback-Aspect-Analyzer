@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ECOM-001",
+    "customer": "Amanda Vance",
+    "text": "The jacket fabric is soft, warm, and true to size. But the delivery arrived 6 days late in a damaged box, and the courier was completely unhelpful.",
+    "category": "E-Commerce",
+    "rating": 3
+  },
+  {
+    "id": "ECOM-002",
+    "customer": "Derek Soto",
+    "text": "Super fast shipping! Ordered on Tuesday and package arrived on Wednesday morning. The material feels durable and the price was a huge bargain.",
+    "category": "E-Commerce",
+    "rating": 5
+  },
+  {
+    "id": "ECOM-003",
+    "customer": "Rachel Green",
+    "text": "Extremely flimsy material, seams unravelled on the first wash. I requested a return and refund over a week ago, yet nobody responded to my ticket. Unacceptable service!",
+    "category": "E-Commerce",
+    "rating": 1
+  },
+  {
+    "id": "ECOM-004",
+    "customer": "Kevin Hart",
+    "text": "The shoes look stylish and genuine craftsmanship is noticeable. However, the sizing is tight around the toes and hurts to walk in. Will exchange for a larger size.",
+    "category": "E-Commerce",
+    "rating": 3
+  },
+  {
+    "id": "ECOM-005",
+    "customer": "Sophia Lopez",
+    "text": "Customer service agent Michael was super polite and processed my exchange in 5 minutes! The replacement arrived spotless. Will definitely shop here again.",
+    "category": "E-Commerce",
+    "rating": 5
+  },
+  {
+    "id": "ECOM-006",
+    "customer": "Liam Wright",
+    "text": "Overpriced for what you get. Cheap plastic feel, and shipping cost nearly half the product price. Not worth it.",
+    "category": "E-Commerce",
+    "rating": 2
+  }
+]

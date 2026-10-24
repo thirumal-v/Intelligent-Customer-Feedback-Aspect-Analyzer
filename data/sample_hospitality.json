@@ -1,0 +1,30 @@
+[
+  {
+    "id": "HOSP-001",
+    "customer": "Robert Downey",
+    "text": "The rooftop view and ambiance were magical! Food tasted delicious, especially the seafood pasta. However, check-in wait time was over 45 minutes and the room bathroom was not properly cleaned.",
+    "category": "Hospitality",
+    "rating": 3
+  },
+  {
+    "id": "HOSP-002",
+    "customer": "Claire Danes",
+    "text": "Spotless room, plush mattress, and attentive staff that greeted us warmly. Breakfast buffet was fresh and plentiful. Excellent value for money!",
+    "category": "Hospitality",
+    "rating": 5
+  },
+  {
+    "id": "HOSP-003",
+    "customer": "Gordon Ramsay",
+    "text": "Bland and cold steak served an hour late. The waiter was indifferent and argued about our bill when we noticed incorrect charges. Avoid this restaurant at all costs!",
+    "category": "Hospitality",
+    "rating": 1
+  },
+  {
+    "id": "HOSP-004",
+    "customer": "Jessica Alba",
+    "text": "Cozy atmosphere and romantic lighting. The cocktails were superb, but the music was slightly too loud for a quiet conversation.",
+    "category": "Hospitality",
+    "rating": 4
+  }
+]

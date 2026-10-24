@@ -1,0 +1,44 @@
+[
+  {
+    "id": "SAAS-001",
+    "customer": "Alex Thorne (DevOps Lead)",
+    "text": "The analytics dashboard UI is intuitive and modern, making reporting a breeze. However, we keep experiencing severe latency during peak hours and the CSV export crashes frequently. Please fix this bug!",
+    "category": "SaaS Platform",
+    "rating": 3
+  },
+  {
+    "id": "SAAS-002",
+    "customer": "Priya Sharma (Product Manager)",
+    "text": "Seamless onboarding and great documentation! The automated sync integration with Slack saved our team 10 hours a week. Fantastic product.",
+    "category": "SaaS Platform",
+    "rating": 5
+  },
+  {
+    "id": "SAAS-003",
+    "customer": "Thomas Becker (CTO)",
+    "text": "We were hit with unexpected hidden charges on our subscription renewal. When we disputed the billing fee, customer support was unresponsive for 4 days. Seriously considering switching to a competitor.",
+    "category": "SaaS Platform",
+    "rating": 1
+  },
+  {
+    "id": "SAAS-004",
+    "customer": "Emma Watson (Growth Analyst)",
+    "text": "Love the core functionality, but it would be great if you could add customizable email alerts. Currently missing granular filter options.",
+    "category": "SaaS Platform",
+    "rating": 4
+  },
+  {
+    "id": "SAAS-005",
+    "customer": "Daniel Craig (Operations)",
+    "text": "Frequent downtime during our monthly close. The software froze and resulted in data loss for our reconciliations. Unacceptable stability for an enterprise tier price.",
+    "category": "SaaS Platform",
+    "rating": 1
+  },
+  {
+    "id": "SAAS-006",
+    "customer": "Zoe Saldana (Marketing Dir)",
+    "text": "The fastest workflow builder on the market. Super responsive interface, zero learning curve, and the customer support rep walked us through everything.",
+    "category": "SaaS Platform",
+    "rating": 5
+  }
+]
